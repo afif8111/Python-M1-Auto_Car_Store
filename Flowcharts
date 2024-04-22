@@ -1,7 +1,0 @@
-mkdir Flowcharts
-mv "Admin Menu Flowchart.pdf" Flowcharts/
-mv "Car Store Flowchart.pdf" Flowcharts/
-mv "Customer Menu Flowchart.pdf" Flowcharts/
-git add .
-git commit -m "Grouped flowchart files into Flowcharts folder"
-git push origin main
