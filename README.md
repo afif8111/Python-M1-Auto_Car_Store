@@ -19,4 +19,6 @@ The code is written in Python. It requires a Python interpreter to run.
 1. Clone the repository
    https://github.com/afif8111/Python-M1-Auto_Car_Store.git
 2. Run the application.
-   
+   auto_car_store.py
+## Contributions:
+Please feel free to open a pull request, sent to my email ariqulfikri@gmail.com or submit an issue if you have suggestions or encountered any problem.
