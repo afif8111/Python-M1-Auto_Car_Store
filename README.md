@@ -17,4 +17,6 @@ Upon running the program, user will be prompted to login. After selecting admin/
 The code is written in Python. It requires a Python interpreter to run.
 ## How to Run:
 1. Clone the repository
+   https://github.com/afif8111/Python-M1-Auto_Car_Store.git
 2. Run the application.
+   
