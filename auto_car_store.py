@@ -1,3 +1,18 @@
+car_store = {
+        1: {'name': 'Toyota Innova', 'type': 'sedan', 'price': 15000, 'stock': 10},
+        2: {'name': 'Honda CRV', 'type': 'sedan', 'price': 17000, 'stock': 15},
+        3: {'name': 'Toyota Fortuner', 'type': 'SUV', 'price': 30000, 'stock': 15},
+        4: {'name': 'Land Cruiser Prado', 'type': 'truck', 'price': 35000, 'stock': 5},
+        5: {'name': 'Honda Jazz', 'type': 'hatchback', 'price':9000,'stock':25},
+        6: {'name': 'Mitsubishi Pajero', 'type': 'SUV','price':2800,'stock':15}
+    }
+car_rent = {
+        1: {'name': 'Honda Brio', 'type': 'hatchback', 'price': 60, 'stock': 10},
+        2: {'name': 'Honda Jazz', 'type':'hatchback','price':80,'stock':10},
+        3: {'name': 'Honda Civic', 'type': 'sedan', 'price': 100, 'stock': 10},
+        4: {'name': 'Toyota Innova', 'type': 'MPV', 'price': 500, 'stock': 5},
+        5: {'name': 'Honda CRV', 'type': 'SUV', 'price': 500, 'stock': 5}
+    }
 def login():#To differentiate admin or customer, only admin able to change the stock
     print("Welcome to the Auto Car Store!")
     while True:
@@ -9,18 +24,18 @@ def login():#To differentiate admin or customer, only admin able to change the s
         else:
             print("Invalid input. Please enter 'y' or 'n'.")
 
-def display_menu(admin=False):#To display menu
+def display_menu(admin):#To display main menu
     print("\nAUTO CAR STORE MENU:")
     print("1. Display car list and stock")
-    if not admin:
-        print("2. Buy a car")
-        print("3. Rent a car")
-        print("4. Sell a car")
-        print("5. Exit")
-    else:
+    if admin:
         print("2. Add car")
         print("3. Remove car")
         print("4. Back to login")
+        print("5. Exit")
+    else:
+        print("2. Buy a car")
+        print("3. Rent a car")
+        print("4. Sell a car")
         print("5. Exit")
 
 def display_car_list():#To display lists of car 
@@ -197,7 +212,7 @@ def sell_car():  # For the customer to sell car(s)
                     break
                 else:
                     print("Invalid input for stock. Please enter a valid integer.")
-            car_id = len(car_store) + 1
+            car_id = len(car_store) + 1 #To assign new car id
             car_store[car_id] = {'name': car_name.capitalize(), 'type': car_type, 'price': price, 'stock': stock}
             print(f"{car_name.capitalize()} has been added to the store.")
         return  # Return to the main menu
@@ -253,21 +268,7 @@ while True:
     else:
         admin = False
         print("Customer login successful. Welcome Customer!")
-    car_store = {
-        1: {'name': 'Toyota Innova', 'type': 'sedan', 'price': 15000, 'stock': 10},
-        2: {'name': 'Honda CRV', 'type': 'sedan', 'price': 17000, 'stock': 15},
-        3: {'name': 'Toyota Fortuner', 'type': 'SUV', 'price': 30000, 'stock': 15},
-        4: {'name': 'Land Cruiser Prado', 'type': 'truck', 'price': 35000, 'stock': 5},
-        5: {'name': 'Honda Jazz', 'type': 'hatchback', 'price':9000,'stock':25},
-        6: {'name': 'Mitsubishi Pajero', 'type': 'SUV','price':2800,'stock':15}
-    }
-    car_rent = {
-        1: {'name': 'Honda Brio', 'type': 'hatchback', 'price': 60, 'stock': 10},
-        2: {'name': 'Honda Jazz', 'type':'hatchback','price':80,'stock':10},
-        3: {'name': 'Honda Civic', 'type': 'sedan', 'price': 100, 'stock': 10},
-        4: {'name': 'Toyota Innova', 'type': 'MPV', 'price': 500, 'stock': 5},
-        5: {'name': 'Honda CRV', 'type': 'SUV', 'price': 500, 'stock': 5}
-    }
+    
     while True:
         display_menu(admin)
         choice = input("Enter your choice: ")
