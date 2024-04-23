@@ -282,7 +282,7 @@ while True:
                 break
             elif choice == '5':
                 print("Exiting the car store. Goodbye!")
-                break
+                exit()
             else:
                 print("Invalid choice. Please enter a number from 1 to 4.")
         else:
@@ -296,6 +296,6 @@ while True:
                 sell_car()
             elif choice == '5':
                 print("Exiting the car store. Goodbye!")
-                break
+                exit()
             else:
                 print("Invalid choice. Please enter a number from 1 to 7.")
